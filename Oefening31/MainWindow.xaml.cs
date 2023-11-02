@@ -57,21 +57,18 @@ namespace Oefening31
         }
         private int ControleOndnr(string inputOndNr)
         {
-            //1 = ok
-            //2 = format fout
-            //3 = controle fout
             if(ControleFormat(inputOndNr))
             {
                 if(ControleModulus(inputOndNr))
                 {
-                    return 1;
+                    return 1; //zowel het formaat als het controlenummer zijn correct
                 } else
                 {
-                    return 3;
+                    return 3; //het formaat is correct maar het controlenummer is fout
                 }
             } else
             {
-                return 2; 
+                return 2; //het formaat is niet correct
             }
         }
         private bool ControleFormat(string inputOndNr)
